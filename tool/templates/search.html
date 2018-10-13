@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>金院小柠檬</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+  <script src="/static/bootstrap/jquery/jquery.min.js"></script>
+  <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+  .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+</style>
+<body>
+
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+      <div class="page-header">
+        <h1>
+          空教室查询 <br><small>(2018-2019学年第一学期)</small>
+        </h1>
+      </div>
+      <button class="btn btn-sm btn-default" onclick="javascript:history.back(-1);" style="float: right;"><span class="glyphicon glyphicon-chevron-left" style="color: rgb(0, 182, 255);">返回</span></button>
+    </div>
+  </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>教室</th>
+      <th>0102</th>
+      <th>0304</th>
+      <th>05</th>
+      <th>0607</th>
+      <th>0809</th>
+      <th>10</th>
+      <th>1112</th>
+      <th>13</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for data in info %}
+      <tr>
+        <td>{{ data.classroom }}</td>
+      {% if data.lesson_0102 == '' %}
+        <td><span class="glyphicon glyphicon-ok" style="color: rgb(0, 182, 68); font-size: 18px;"></span></td>
+      {% else %}
+        <td><span class="glyphicon glyphicon-remove" style="color: rgb(255, 80, 43); font-size: 18px;"></span></td>
+      {% endif %}
+      {% if data.lesson_0304 == '' %}
+        <td><span class="glyphicon glyphicon-ok" style="color: rgb(0, 182, 68); font-size: 18px;"></span></td>
+      {% else %}
+        <td><span class="glyphicon glyphicon-remove" style="color: rgb(255, 80, 43); font-size: 18px;"></span></td>
+      {% endif %}
+      {% if data.lesson_05 == '' %}
+        <td><span class="glyphicon glyphicon-ok" style="color: rgb(0, 182, 68); font-size: 18px;"></span></td>
+      {% else %}
+        <td><span class="glyphicon glyphicon-remove" style="color: rgb(255, 80, 43); font-size: 18px;"></span></td>
+      {% endif %}
+      {% if data.lesson_0607 == '' %}
+        <td><span class="glyphicon glyphicon-ok" style="color: rgb(0, 182, 68); font-size: 18px;"></span></td>
+      {% else %}
+        <td><span class="glyphicon glyphicon-remove" style="color: rgb(255, 80, 43); font-size: 18px;"></span></td>
+      {% endif %}
+      {% if data.lesson_0809 == '' %}
+        <td><span class="glyphicon glyphicon-ok" style="color: rgb(0, 182, 68); font-size: 18px;"></span></td>
+      {% else %}
+        <td><span class="glyphicon glyphicon-remove" style="color: rgb(255, 80, 43); font-size: 18px;"></span></td>
+      {% endif %}
+      {% if data.lesson_10 == '' %}
+        <td><span class="glyphicon glyphicon-ok" style="color: rgb(0, 182, 68); font-size: 18px;"></span></td>
+      {% else %}
+        <td><span class="glyphicon glyphicon-remove" style="color: rgb(255, 80, 43); font-size: 18px;"></span></td>
+      {% endif %}
+      {% if data.lesson_1112 == '' %}
+        <td><span class="glyphicon glyphicon-ok" style="color: rgb(0, 182, 68); font-size: 18px;"></span></td>
+      {% else %}
+        <td><span class="glyphicon glyphicon-remove" style="color: rgb(255, 80, 43); font-size: 18px;"></span></td>
+      {% endif %}
+      {% if data.lesson_13 == '' %}
+        <td><span class="glyphicon glyphicon-ok" style="color: rgb(0, 182, 68); font-size: 18px;"></span></td>
+      {% else %}
+        <td><span class="glyphicon glyphicon-remove" style="color: rgb(255, 80, 43); font-size: 18px;"></span></td>
+      {% endif %}
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<!--<div class="footer">
+  <nav class="navbar navbar-default navbar-static-bottom">
+    <div class="jumbotron text-center">-->
+      <!-- <ul><img style="width: 20px; height: 20px;" src="http://www.beian.gov.cn/img/ghs.png" alt="备案标识" />
+      <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32058202010228&token=2be051c1-22dd-44ec-9f4b-d41155f2d855" target="_blank" rel="nofollow noopener">江公网安备 32058202010228 号</a></ul> -->
+      <!--<ul><a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow noopener">冀ICP备18027234号-1</a></ul>
+    </div>
+  </nav>
+</div>-->
+</body>
+</html>
